@@ -74,5 +74,31 @@
         app:srcCompat="@mipmap/house_logo"
         tools:layout_editor_absoluteY="16dp" />
 
+    <Button
+        android:onClick="openGarageDoor"
+        android:id="@+id/button"
+        android:layout_width="128dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="80dp"
+        android:text="Open"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/readyStatus" />
+
+    <Button
+        android:onClick="closeGarageDoor"
+        android:id="@+id/button2"
+        android:layout_width="129dp"
+        android:layout_height="69dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="83dp"
+        android:text="Close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/readyStatus" />
+
 
 </android.support.constraint.ConstraintLayout>
