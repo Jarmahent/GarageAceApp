@@ -35,8 +35,8 @@
                                     <map>
                                       <entry key="backgroundLayerName" value="ic_launcher_background" />
                                       <entry key="foregroundImage" value="C:\Users\keb\Pictures\glogo.png" />
-                                      <entry key="foregroundLayerName" value="main_logo_foreground" />
-                                      <entry key="outputName" value="mainLogo" />
+                                      <entry key="foregroundLayerName" value="house_logo" />
+                                      <entry key="outputName" value="houselogo" />
                                     </map>
                                   </option>
                                 </PersistentState>
