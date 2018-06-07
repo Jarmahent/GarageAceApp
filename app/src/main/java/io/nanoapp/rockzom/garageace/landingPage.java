@@ -25,15 +25,15 @@ public class landingPage extends AppCompatActivity {
         final Context context = getApplicationContext();
         CharSequence text = "Closing Garage Door...";
         final int duration = Toast.LENGTH_SHORT;
-        Toast.makeText(context, text, duration).show();
+        //Toast.makeText(context, text, duration).show();
 
-        String closeGarageDoorUrl = "http://linkforclosedoor";
+        String closeGarageDoorUrl = "http://192.168.0.21/pinOff";
         RequestQueue queue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, closeGarageDoorUrl,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(context, response, duration).show();
+                        Toast.makeText(context, "Garage Closed", duration).show();
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -43,22 +43,25 @@ public class landingPage extends AppCompatActivity {
             }
         }
         );
-        //queue.add(stringRequest);
+        queue.add(stringRequest);
     }
+
+
+
 
     public void openGarageDoor(final View v){
         final Context context = getApplicationContext();
         CharSequence text = "Opening Garage Door...";
         final int duration = Toast.LENGTH_SHORT;
-        Toast.makeText(context, text, duration).show();
+        //Toast.makeText(context, text, duration).show();
 
-        String openGarageDoorUrl = "http://linkforopendoor";
+        String openGarageDoorUrl = "http://192.168.0.21/pinOn";
         RequestQueue queue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, openGarageDoorUrl,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(context, response, duration).show();
+                        Toast.makeText(context, "Opened Garage", duration).show();
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -69,7 +72,7 @@ public class landingPage extends AppCompatActivity {
             }
         }
         );
-        //queue.add(stringRequest);
+        queue.add(stringRequest);
     }
 }
 
